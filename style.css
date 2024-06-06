@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+#navbar-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Adjust z-index if needed */
+    background-color: #0c0c0c; /* Adjust background color as needed */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for visual effect */
+}
+
+
+body {
+    background: #080808;
+    color: #fff;
+    scroll-behavior: smooth; /* Added for smooth scrolling */
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #004fff;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+    
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+    font-size: larger;
+}
+
+#naam {
+    color: #004fff;
+}
+
+/* Add these styles to your existing CSS */
+
+@keyframes blink {
+    0% { border-right-color: rgba(255, 255, 255, 0.75); }
+    50% { border-right-color: transparent; }
+    100% { border-right-color: rgba(255, 255, 255, 0.75); }
+}
+
+#naam {
+    display: inline-block;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    animation: blink 0.7s steps(40) infinite;
+}
+/*-----------------------about---------------------*/
+#about{
+    padding: 80px 0;
+    color: #ababab;
+
+
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+    
+}
+
+.about-col-1 img{
+    width: 300px;;
+    border-radius:15px ;
+    height: 400px;
+}
+
+.about-col-2{
+    flex-basis: 60% ;
+}
+
+.sub-title{
+    font-size: 45px;
+    font-weight: 700;
+    color: #fff;
+
+}
+
+.tab-titles{
+    display: flex;
+    margin:20px 0 40px ;
+
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    color: #ababab;
+}
+
+.tab-links.active-link::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: #004fff;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+}
+
+.tab-content {
+    display: none;
+    margin-top: 20px;
+}
+
+.tab-content.active-content {
+    display: block;
+}
+
+.tab-links:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+
+/*----------------------project---------------------*/
+.sub-title{
+    font-size: 45px;
+    font-weight: 700;
+    color: #fff;
+
+}
+#project {
+    padding: 50px 0;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    margin-top: 50px;
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    height: 300px; /* Adjusted height for reduced size */
+    object-fit: cover;
+    border-radius: 10px;
+    display: inline-block; 
+    transition: transform 0.5s; 
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #004fff);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a {
+    margin-top: 20px;
+    color: #004fff;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.work:hover img {
+    transform: scale(1.05); /* Adjusted scale for smaller images */
+}
+
+.work:hover .layer {
+    height: 100%;
+}
+
+/* -----------------------------skills-------------------*/
+#skills {
+    padding: 30px 0;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 20px;
+    margin-top: 50px;
+}
+
+.skill-item {
+    background: #262626;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+    border-radius: 8px;
+}
+
+.skill-item i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.skill-item h2 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.skills-list div h2{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+
+/*------------------------contact----------------------*/
+#contact {
+    background: #111;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#contact .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#contact .sub-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+#contact p {
+    font-size: 18px;
+    color: #ababab;
+    margin: 10px 0;
+}
+
+#contact .social-icons {
+    margin-top: 20px;
+}
+
+#contact .social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+#contact .social-icons a:hover {
+    color: #004fff;
+}
+
+/*------------------css for small screen----------------*/
+#close-menu {
+    display: none;
+}
+#open-menu{
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .header-text {
+        margin-top: 100%;
+        font-size: 16px;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+  
+
+    nav ul {
+        background: #004fff;
+        position: fixed;
+        top: 0;
+        right: -100%; /* Hidden by default */
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        transition: right 0.3s;
+    }
+
+    nav ul li {
+        margin: 20px 0;
+    }
+
+    #close-menu {
+        display: block;
+        font-size: 25px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    nav.fa-solid {
+        display: none;
+    }
+
+    nav ul.show {
+        right: 0;
+    }
+}
+/*--------home page animation-------------*/
