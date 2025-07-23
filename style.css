@@ -27,8 +27,8 @@ body {
 }
 
 .logo {
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 200px;
 }
 
 .container {
@@ -169,16 +169,22 @@ nav ul li a:hover::after {
 .tab-content {
     display: none;
     margin-top: 20px;
+    flex-basis: 60%;
 }
+
+
 
 .tab-content.active-content {
-    display: block;
+    display:flex
 }
 
+
 .tab-links:hover {
-    text-decoration: underline;
-    cursor: pointer;
+    color: #fff;
+    text-decoration: solid;
+    
 }
+
 
 
 
